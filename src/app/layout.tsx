@@ -3,7 +3,9 @@ import "./globals.css";
 // import NavBar from "@/components/NavBar";
 import FloatingMenu from "@/components/FloatingMenu";
 import Header from "@/components/Header";
-import CompassGuide from "@/components/CompassGuide";
+import CompassGuide from "@/components/ui/CompassGuide";
+import ClientWrapper from "@/components/ClientWrapper";
+// import JournalGuide from "@/components/ui/JournalGuide";
 // import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -19,12 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body  className="flex flex-col min-h-screen bg-white text-black">
-        {/* <NavBar /> */}
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <CompassGuide />
-        <FloatingMenu />
-        {/* <Footer /> */}
+        <ClientWrapper>
+            {/* <NavBar /> */}
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <CompassGuide />
+            {/* <JournalGuide /> */}
+            <FloatingMenu />
+            {/* <Footer /> */}
+        </ClientWrapper>
       </body>
     </html>
   );

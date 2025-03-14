@@ -1,4 +1,4 @@
-import CompassGuide from "@/components/CompassGuide";
+import CompassGuide from "@/components/ui/CompassGuide";
 
 export default function Home() {
   return (
